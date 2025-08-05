@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul li {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+button, input[type=submit], input[type=reset]{
+    cursor: pointer;
+    outline:none;
+    border: none;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.header{
+    background-color: #666;
+}
+
+.header .logo a{
+    color: white;
+}
+
+.header .container{ 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.logo{
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.logo img{
+    display: inline-block;
+    height: 100%;
+    /*height: 40px;*/
+}
+
+.header ul{
+    display: flex;
+    gap: 1.5rem;
+}
+
+.header ul li a{
+    color: white;
+}
+
+.hero {
+    
+    height: 100vh;
+    background: url('../images/banniere.jpg') no-repeat center center/cover;
+    
+    position:relative;
+}
+
+.hero .absolute{
+    position: absolute;
+    background-color: rgba(110, 110, 110, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    max-width: 600px;
+}
+
+.hero .btn, .form_inscription .btn_submit, .btn_ajouter_activite {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    background-color: #ff5733;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #e04d2c;
+}
+
+main{
+    padding: 60px 0;
+    min-height: 75vh;
+}
+
+footer{
+    background-color: #666;
+    color: white;
+    padding: 20px 0;
+}
+
+footer p{
+    text-align: center;
+}
+
+
+/*page index*/
+
+.welcome-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    min-height: 100vh;
+}
+
+.welcome-content {
+    max-width: 50%;
+}
+
+.welcome-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.welcome-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.welcome-content a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ff5733;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/*page liste_activite**/
+
+main.liste_activites .header_liste_activites, main.details_activite .header_details_activite, main.inscription .header_inscription, main.liste_utilisateurs .header_liste_utilisateurs, main.ajouter_activite .header_ajouter_activite, main.ajouter_type_activite .header_ajouter_type_activite {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #666;
+    background-color: #eee;
+}
+
+main.liste_activites .header_liste_activites a, main.details_activite .header_details_activite a, main.inscription .header_inscription a, main.liste_utilisateurs .header_liste_utilisateurs a, main.ajouter_activite .header_ajouter_activite a, main.ajouter_type_activite .header_ajouter_type_activite a{
+    display: block;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    background-color: #ff5733;
+}
+
+main.liste_activites .rechercher{
+    border: 20px solid #666;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h4.mode_recherche{
+    margin: 30px 0;
+    font-size: 20px;
+    color: blue;
+}
+
+h4.resultat_vide{
+    padding: 40px 0;
+    font-size: 20px;
+    color: rgb(255, 43, 43);
+    text-align: center;
+}
+
+.liste_activites form{
+    text-align: center;
+}
+
+.liste_activites form > div{
+    margin-bottom: 10px;
+}
+
+.liste_activites form > div > input, .liste_activites form > div > select{
+    padding: 2px 5px;
+    border: 1px solid #666;
+    width: 50%;
+}
+
+.liste_activites form > div.input_date > input{
+    padding: 2px 5px;
+    border: 1px solid #666;
+    width: 24%;
+}
+
+.liste_activites form input[type=submit], .liste_activites form input[type=reset], a.btn_details{
+    background-color: #616161;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 10px;
+}
+
+a.btn_details{
+    display: block;
+}
+
+.liste_activites form input[type=submit]{
+    margin-right: 20px;
+}
+
+.table thead {
+    background-color: #666;
+    color: white;
+}
+
+.table thead th{
+    padding: 5px 10px;
+}
+
+.table tbody td{
+    padding: 5px 10px;
+}
+
+
+.div_404{
+    width: 100vw;
+    height: 82vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*page Details activité*/
+main.details_activite .diviseur, main.ajouter_activite .diviseur{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+main.details_activite .diviseur .col_map, main.ajouter_activite .diviseur .col_map{
+    width: 50%;
+}
+
+main.details_activite .diviseur .col_map .map, main.ajouter_activite .diviseur .col_map .map{
+    width: 100%;
+    height: 500px;
+}
+
+main.details_activite .diviseur .col_infos p{
+    font-size: 16px;
+    margin-bottom: 25px;
+    color: #333
+}
+
+
+main.details_activite .diviseur .col_infos p span{
+    color: rgb(6, 6, 108);
+    font-weight: bold;
+}
+
+main.details_activite .diviseur .col_infos, main.ajouter_activite .diviseur .col_infos{
+    width: 50%;
+}
+
+
+/*page inscription*/
+
+.form_inscription{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.form_inscription div.form_input{
+    margin-bottom: 20px;
+}
+
+.form_inscription div.form_input label{
+    margin-right: 8px;
+}
+
+.form_inscription div.form_input input{
+    padding: 2px 5px;
+}
+
+.form_inscription .btn_submit, .btn_ajouter_activite{
+    padding: 8px 15px;
+    margin-top: 0;
+}
+
+/*page ajouter activite*/
+
+main.ajouter_activite form > div.form_input_label{
+    margin-bottom: 18px;
+}
+
+main.ajouter_activite form > div > label{
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+main.ajouter_activite form > div > input, main.ajouter_activite form > div > select, main.ajouter_activite form > div > textarea{
+    padding: 2px 5px;
+    width: 100%;
+}
+
+main.ajouter_activite form > div > textarea{
+    height: 90px;
+    resize: none;
+}
+
+main.ajouter_activite form > div > select#typeActivite{
+    margin-bottom: 5px;
+}
+
+main.ajouter_activite form > div > .btn_ajouter_type_activite{
+    display: block;
+    padding: 2px;
+    background-color: #616161;
+    color: white;
+    border-radius: 5px;
+    float: right;
+}
+
+main.ajouter_activite form > div::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.btn_ajouter_activite{
+    float: right;
+}
+
+/*page ajouter type activite*/
+
+.form_ajouter_type_activite{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.form_ajouter_type_activite .form_input_label{
+    margin-bottom: 20px;
+}
+
+.form_ajouter_type_activite .form_input_label label{
+    margin-right: 8px;
+}
+
+.form_ajouter_type_activite .form_input_label input{
+    padding: 2px 5px;
+}
+
+.form_ajouter_type_activite .btn_ajouter_type_activite{
+    display: inline-block;
+    color: white;
+    background-color: #ff5733;
+    border-radius: 5px;
+    padding: 8px 15px;
+}
+
+
+
+.message_alert{
+    padding: 15px 30px;
+    margin: 30px 0;
+}
+
+.message_alert.success{
+    color:white;
+    background-color: rgb(17, 173, 17);
+}
+
+.message_alert.error{
+    color:white;
+    background-color: rgb(228, 40, 40);
+}
