@@ -1,6 +1,6 @@
 <?php
 $host = getenv('DB_HOST');
-$port = getenv('DB_PORT') ?: 3306;
+$port = getenv('DB_PORT') ?: 55612;
 $db   = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
@@ -18,4 +18,5 @@ try {
 } catch (PDOException $e) {
     die("Erreur connexion DB: " . $e->getMessage());
 }
+
 
