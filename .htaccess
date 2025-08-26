@@ -1,0 +1,9 @@
+Options -Indexes
+<FilesMatch "\.(env|ini|log|sql)$">
+  Require all denied
+</FilesMatch>
+# Si tu utilises des URLs "propres", décommente :
+# RewriteEngine On
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^ index.php [QSA,L]
